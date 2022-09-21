@@ -58,6 +58,8 @@ Press CTRL+C to quit
 
 Now, the Flask server is up and running at address *http://127.0.0.1:5000*. In order to run the flask_app.py, run the following command  `curl --silent --show-error --fail 'http://localhost:5000/predict' -d 'label=<label>' --output <filepath>.jpg`, where `<label>` is a placeholder for any label of choice from the FashionMNIST dataset and `<filepath>` is a placeholder for the name where the image output is saved. Therefore, to generate an image of a ankle boot  type  `curl --silent --show-error --fail 'http://localhost:5000/predict' -d 'label=Ankle boot' --output images/flask_generated/ankleboot.jpg`. The available labels for FashionMNIST are the following: *T-shirt/top*, *Trouser*, *Pullover*,*Dress*,*Coat*,*Sandal*,*Shirt*,*Sneaker*,*Bag* and *Ankle boot*.
 
+For more information about the *curl* command check [Man Page](https://curl.se/docs/manpage.html)
+
 ## Unit tests
 The test for the generator network are contained in the file *unit_tests/unit_test_generator.py*. In order to run the entire test suit run, from the project root folder, run `pytest unit_tests/unit_test_generator.py` in the terminal. Furthermore, to run only a specific test run `pytest unit_tests/unit_test_generator.py::TestGenerator::<test_func>`. The available tests are:
 
