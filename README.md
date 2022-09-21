@@ -2,9 +2,6 @@
 Generating FanshionMNIST-like data with Conditional GAN.
 ![](https://github.com/CGAN/images/GD.gif)
 
-# Conditional GAN
-Generating FanshionMNIST-like data with Conditional GAN
-
 ## Setup the environment
 Open the terminal and create a conda environment by running `conda create --name py310 python=3.10`.
 
