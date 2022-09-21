@@ -22,6 +22,8 @@ The following image shows the training loss curves of the Discriminator and Gene
 <img src="https://github.com/simoneVU/CGAN/blob/main/images/loss_curve.png" width="600" height="500" />
 </p>
 
+Furthermore, from the loss curves above it is possible to see that the Generator improves its loss after around 50 epochs, while, the Discriminator slighly get worse. Hence, the ability of the Discriminator ogf disthinguishing newly generated images from the Generator slighlty decrease by reaching a loss of 0.7 on average. In turn, this task for the Discriminator becomes harder the more the Generator decreases its loss. This behavior is also noticeable at the start of training when the Discriminator does not know how to generate images. Thus, the discriminator loss is very low since it can recognize the real images vs the fake images easily.
+
 ### Traning the model
 To train the model use the script `train.py`. The script already loads the FashionMNIST dataset from *~/.pytorch/F_MNIST_data* and transform it appropritely. The training of the model can be run with some optional terminal arguments by running `python train.py --<arg_name> <arg_value>`. The terminal argument that can be passed are the following:
 
