@@ -1,6 +1,9 @@
 # Conditional GAN
 Generating FanshionMNIST-like data with Conditional GAN.
-![](https://github.com/CGAN/images/GD.gif)
+
+<p align="center">
+<img src="https://github.com/simoneVU/CGAN/blob/main/images/GD.gif" width="500" height="100" />
+</p>
 
 ## Setup the environment
 Open the terminal and create a conda environment by running `conda create --name py310 python=3.10`.
@@ -14,7 +17,10 @@ Once the environment is active, install the packages in the *requirements.txt* f
 The mathematical formula defining the CGAN is $\underset{G}{min}\underset{D}{max}V(D,G) = \mathop{\mathbb{E}}_{\boldsymbol{x}\sim p(\boldsymbol{x})}\[log D(\boldsymbol{x}|\boldsymbol{y})]+\mathop{\mathbb{E}}\_{\boldsymbol{x}\sim p(\boldsymbol{z})}\[ log(1-D(G(\boldsymbol{z}|\boldsymbol{y})))\]$
 
 The following image shows the training loss curves of the Discriminator and Generator over 250 epochs of training. 
-![loss curves](images/loss_curve.png)
+
+<p align="center">
+<img src="https://github.com/simoneVU/CGAN/blob/main/images/loss_curve.png" width="600" height="500" />
+</p>
 
 ### Traning the model
 To train the model use the script `train.py`. The script already loads the FashionMNIST dataset from *~/.pytorch/F_MNIST_data* and transform it appropritely. The training of the model can be run with some optional terminal arguments by running `python train.py --<arg_name> <arg_value>`. The terminal argument that can be passed are the following:
@@ -31,8 +37,11 @@ Example of run a training for the FashionMNIST dataset: `python train.py --n_epo
 ### Testing the model
 
 To test the model run `python test.py --latent_dim <default> --num_classes <default> --img_dim <default>`, where the command line argument are optional. However, not that the `num_classes` and the `img_dim` are dataset dependent. Hence, in this case they should not be change in order to run it on the FashionMNIST dataset (the default dataset). The output of the model testing is saved in *images/comparisons*. An example of one output for label 1 is the following
-![comparison image](images/comparisons/comparison_1.png)
 
+<p align="center">
+<img src="https://github.com/simoneVU/CGAN/blob/main/images/comparisons/comparison_1.png" width="400" height="300" />
+<img src="https://github.com/simoneVU/CGAN/blob/main/images/comparisons/comparison_2.png" width="400" height="300" />
+</p>
 
 ## Running the Flask application 
 In order to run the flask application it is first needed to link it with the flask command. Hence, open in the terminal run `export FLASK_APP=flask_app.py` (for MAC users) or  `set FLASK_APP=flask_app.py` (for windows users). Then, start the Flask server by running  `flask run` in the folder containing the `flask_app.py` script. Then, in the terminal should appear the following
